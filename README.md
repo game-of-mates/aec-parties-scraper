@@ -60,4 +60,6 @@ gitsetup.sh
 
 # References
 
+https://spring.io/guides/gs/messaging-rabbitmq/
+
 Github API Reference - https://developer.github.com/v3/repos/#create
