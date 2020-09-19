@@ -3,6 +3,7 @@ package gameofmates.au.aecparties.config;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
@@ -20,6 +21,9 @@ public class AecPartiesScraperConfig {
 	@Value("${outbound.queue}")
 	public String queue;
 
+	@Value("${topic.exchangeName}")
+	public String topicExchangeName;
+	
 	@Bean
 	public ConnectionFactory connectionFactory() {
 		return new CachingConnectionFactory(hostname);
@@ -35,6 +39,11 @@ public class AecPartiesScraperConfig {
 	@Bean
 	public AmqpAdmin amqpAdmin() {
 		return new RabbitAdmin(connectionFactory());
+	}
+
+	@Bean
+	TopicExchange exchange() {
+		return new TopicExchange(topicExchangeName);
 	}
 
 	@Bean

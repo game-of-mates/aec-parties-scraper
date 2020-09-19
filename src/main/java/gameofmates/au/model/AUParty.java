@@ -1,14 +1,17 @@
 package gameofmates.au.model;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+
 import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
+
 import org.springframework.validation.annotation.Validated;
 import org.threeten.bp.LocalDate;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -17,293 +20,282 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "An AEC Registered political party, includes branches.")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen",
-    date = "2019-12-10T23:29:57.308Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-12-10T23:29:57.308Z")
 
 public class AUParty {
-  @JsonProperty("id")
-  private String id = null;
+	@JsonProperty("id")
+	private String id = null;
 
-  @JsonProperty("name")
-  private String name = null;
+	@JsonProperty("name")
+	private String name = null;
 
-  @JsonProperty("abbreviation")
-  private String abbreviation = null;
+	@JsonProperty("abbreviation")
+	private String abbreviation = null;
 
-  @JsonProperty("registrationDate")
-  private LocalDate registrationDate = null;
+	@JsonProperty("registrationDate")
+	private LocalDate registrationDate = null;
 
-  @JsonProperty("lastUpdated")
-  private LocalDate lastUpdated = null;
+	@JsonProperty("lastUpdated")
+	private LocalDate lastUpdated = null;
 
-  @JsonProperty("electionFundingPayments")
-  private Boolean electionFundingPayments = null;
+	@JsonProperty("electionFundingPayments")
+	private Boolean electionFundingPayments = null;
 
-  @JsonProperty("logoURI")
-  private String logoURI = null;
+	@JsonProperty("logoURI")
+	private String logoURI = null;
 
-  @JsonProperty("webpage")
-  private String webpage = null;
+	@JsonProperty("webpage")
+	private String webpage = null;
 
-  @JsonProperty("branches")
-  @Valid
-  private List<AUParty> branches = null;
+	@JsonProperty("branches")
+	@Valid
+	private List<AUParty> branches = null;
 
-  public AUParty id(String id) {
-    this.id = id;
-    return this;
-  }
+	public AUParty id(String id) {
+		this.id = id;
+		return this;
+	}
 
-  /**
-   * URN identifier of the aec.gov.au Party
-   * 
-   * @return id
-   **/
-  @ApiModelProperty(example = "urn:aec.gov.au:party:animaljusticeparty",
-      value = "URN identifier of the aec.gov.au Party")
+	/**
+	 * URN identifier of the aec.gov.au Party
+	 * 
+	 * @return id
+	 **/
+	@ApiModelProperty(example = "urn:aec.gov.au:party:animaljusticeparty", value = "URN identifier of the aec.gov.au Party")
 
-  @Pattern(regexp = "urn\\:aec.gov.au\\:party\\:[A-Z,a-z,0-9,#,!]*")
-  public String getId() {
-    return id;
-  }
+	@Pattern(regexp = "urn\\:aec.gov.au\\:party\\:[A-Z,a-z,0-9,#,!]*")
+	public String getId() {
+		return id;
+	}
 
-  public void setId(String id) {
-    this.id = id;
-  }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-  public AUParty name(String name) {
-    this.name = name;
-    return this;
-  }
+	public AUParty name(String name) {
+		this.name = name;
+		return this;
+	}
 
-  /**
-   * Name Of Party
-   * 
-   * @return name
-   **/
-  @ApiModelProperty(example = "Animal Justice Party", value = "Name Of Party")
+	/**
+	 * Name Of Party
+	 * 
+	 * @return name
+	 **/
+	@ApiModelProperty(example = "Animal Justice Party", value = "Name Of Party")
 
+	public String getName() {
+		return name;
+	}
 
-  public String getName() {
-    return name;
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	public AUParty abbreviation(String abbreviation) {
+		this.abbreviation = abbreviation;
+		return this;
+	}
 
-  public AUParty abbreviation(String abbreviation) {
-    this.abbreviation = abbreviation;
-    return this;
-  }
+	/**
+	 * Abbreviation used for the party
+	 * 
+	 * @return abbreviation
+	 **/
+	@ApiModelProperty(example = "AJP", value = "Abbreviation used for the party")
 
-  /**
-   * Abbreviation used for the party
-   * 
-   * @return abbreviation
-   **/
-  @ApiModelProperty(example = "AJP", value = "Abbreviation used for the party")
+	public String getAbbreviation() {
+		return abbreviation;
+	}
 
+	public void setAbbreviation(String abbreviation) {
+		this.abbreviation = abbreviation;
+	}
 
-  public String getAbbreviation() {
-    return abbreviation;
-  }
+	public AUParty registrationDate(LocalDate registrationDate) {
+		this.registrationDate = registrationDate;
+		return this;
+	}
 
-  public void setAbbreviation(String abbreviation) {
-    this.abbreviation = abbreviation;
-  }
+	/**
+	 * AEC Registration date of the party
+	 * 
+	 * @return registrationDate
+	 **/
+	@ApiModelProperty(example = "1984-06-22", value = "AEC Registration date of the party")
 
-  public AUParty registrationDate(LocalDate registrationDate) {
-    this.registrationDate = registrationDate;
-    return this;
-  }
+	@Valid
 
-  /**
-   * AEC Registration date of the party
-   * 
-   * @return registrationDate
-   **/
-  @ApiModelProperty(example = "1984-06-22", value = "AEC Registration date of the party")
+	public LocalDate getRegistrationDate() {
+		return registrationDate;
+	}
 
-  @Valid
+	public void setRegistrationDate(LocalDate registrationDate) {
+		this.registrationDate = registrationDate;
+	}
 
-  public LocalDate getRegistrationDate() {
-    return registrationDate;
-  }
+	public AUParty lastUpdated(LocalDate lastUpdated) {
+		this.lastUpdated = lastUpdated;
+		return this;
+	}
 
-  public void setRegistrationDate(LocalDate registrationDate) {
-    this.registrationDate = registrationDate;
-  }
+	/**
+	 * AEC modification to registration
+	 * 
+	 * @return lastUpdated
+	 **/
+	@ApiModelProperty(example = "2010-11-23", value = "AEC modification to registration")
 
-  public AUParty lastUpdated(LocalDate lastUpdated) {
-    this.lastUpdated = lastUpdated;
-    return this;
-  }
+	@Valid
 
-  /**
-   * AEC modification to registration
-   * 
-   * @return lastUpdated
-   **/
-  @ApiModelProperty(example = "2010-11-23", value = "AEC modification to registration")
+	public LocalDate getLastUpdated() {
+		return lastUpdated;
+	}
 
-  @Valid
+	public void setLastUpdated(LocalDate lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
 
-  public LocalDate getLastUpdated() {
-    return lastUpdated;
-  }
+	public AUParty electionFundingPayments(Boolean electionFundingPayments) {
+		this.electionFundingPayments = electionFundingPayments;
+		return this;
+	}
 
-  public void setLastUpdated(LocalDate lastUpdated) {
-    this.lastUpdated = lastUpdated;
-  }
+	/**
+	 * Does party currently receive AEC funding?
+	 * 
+	 * @return electionFundingPayments
+	 **/
+	@ApiModelProperty(example = "true", value = "Does party currently receive AEC funding?")
 
-  public AUParty electionFundingPayments(Boolean electionFundingPayments) {
-    this.electionFundingPayments = electionFundingPayments;
-    return this;
-  }
+	public Boolean isElectionFundingPayments() {
+		return electionFundingPayments;
+	}
 
-  /**
-   * Does party currently receive AEC funding?
-   * 
-   * @return electionFundingPayments
-   **/
-  @ApiModelProperty(example = "true", value = "Does party currently receive AEC funding?")
+	public void setElectionFundingPayments(Boolean electionFundingPayments) {
+		this.electionFundingPayments = electionFundingPayments;
+	}
 
+	public AUParty logoURI(String logoURI) {
+		this.logoURI = logoURI;
+		return this;
+	}
 
-  public Boolean isElectionFundingPayments() {
-    return electionFundingPayments;
-  }
+	/**
+	 * base64 encoded string of the Parties logo / image
+	 * 
+	 * @return logoURI
+	 **/
+	@ApiModelProperty(example = "data:image/jpeg;charset=utf-8;base64,/9", value = "base64 encoded string of the Parties logo / image")
 
-  public void setElectionFundingPayments(Boolean electionFundingPayments) {
-    this.electionFundingPayments = electionFundingPayments;
-  }
+	public String getLogoURI() {
+		return logoURI;
+	}
 
-  public AUParty logoURI(String logoURI) {
-    this.logoURI = logoURI;
-    return this;
-  }
+	public void setLogoURI(String logoURI) {
+		this.logoURI = logoURI;
+	}
 
-  /**
-   * base64 encoded string of the Parties logo / image
-   * 
-   * @return logoURI
-   **/
-  @ApiModelProperty(example = "data:image/jpeg;charset=utf-8;base64,/9",
-      value = "base64 encoded string of the Parties logo / image")
+	public AUParty webpage(String webpage) {
+		this.webpage = webpage;
+		return this;
+	}
 
+	/**
+	 * URL of the parties page
+	 * 
+	 * @return webpage
+	 **/
+	@ApiModelProperty(example = "https://animaljusticeparty.org/", value = "URL of the parties page")
 
-  public String getLogoURI() {
-    return logoURI;
-  }
+	public String getWebpage() {
+		return webpage;
+	}
 
-  public void setLogoURI(String logoURI) {
-    this.logoURI = logoURI;
-  }
+	public void setWebpage(String webpage) {
+		this.webpage = webpage;
+	}
 
-  public AUParty webpage(String webpage) {
-    this.webpage = webpage;
-    return this;
-  }
+	public AUParty branches(List<AUParty> branches) {
+		this.branches = branches;
+		return this;
+	}
 
-  /**
-   * URL of the parties page
-   * 
-   * @return webpage
-   **/
-  @ApiModelProperty(example = "https://animaljusticeparty.org/", value = "URL of the parties page")
+	public AUParty addBranchesItem(AUParty branchesItem) {
+		if (this.branches == null) {
+			this.branches = new ArrayList<AUParty>();
+		}
+		this.branches.add(branchesItem);
+		return this;
+	}
 
+	/**
+	 * Branches of this party, such as State branches of a national party.
+	 * 
+	 * @return branches
+	 **/
+	@ApiModelProperty(value = "Branches of this party, such as State branches of a national party.")
 
-  public String getWebpage() {
-    return webpage;
-  }
+	@Valid
 
-  public void setWebpage(String webpage) {
-    this.webpage = webpage;
-  }
+	public List<AUParty> getBranches() {
+		return branches;
+	}
 
-  public AUParty branches(List<AUParty> branches) {
-    this.branches = branches;
-    return this;
-  }
+	public void setBranches(List<AUParty> branches) {
+		this.branches = branches;
+	}
 
-  public AUParty addBranchesItem(AUParty branchesItem) {
-    if (this.branches == null) {
-      this.branches = new ArrayList<AUParty>();
-    }
-    this.branches.add(branchesItem);
-    return this;
-  }
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
+		AUParty auParty = (AUParty) o;
+		return Objects.equals(this.id, auParty.id) && Objects.equals(this.name, auParty.name)
+				&& Objects.equals(this.abbreviation, auParty.abbreviation)
+				&& Objects.equals(this.registrationDate, auParty.registrationDate)
+				&& Objects.equals(this.lastUpdated, auParty.lastUpdated)
+				&& Objects.equals(this.electionFundingPayments, auParty.electionFundingPayments)
+				&& Objects.equals(this.logoURI, auParty.logoURI) && Objects.equals(this.webpage, auParty.webpage)
+				&& Objects.equals(this.branches, auParty.branches);
+	}
 
-  /**
-   * Branches of this party, such as State branches of a national party.
-   * 
-   * @return branches
-   **/
-  @ApiModelProperty(value = "Branches of this party, such as State branches of a national party.")
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, name, abbreviation, registrationDate, lastUpdated, electionFundingPayments, logoURI,
+				webpage, branches);
+	}
 
-  @Valid
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("class AUParty {\n");
 
-  public List<AUParty> getBranches() {
-    return branches;
-  }
+		sb.append("    id: ").append(toIndentedString(id)).append("\n");
+		sb.append("    name: ").append(toIndentedString(name)).append("\n");
+		sb.append("    abbreviation: ").append(toIndentedString(abbreviation)).append("\n");
+		sb.append("    registrationDate: ").append(toIndentedString(registrationDate)).append("\n");
+		sb.append("    lastUpdated: ").append(toIndentedString(lastUpdated)).append("\n");
+		sb.append("    electionFundingPayments: ").append(toIndentedString(electionFundingPayments)).append("\n");
+		sb.append("    logoURI: ").append(toIndentedString(logoURI)).append("\n");
+		sb.append("    webpage: ").append(toIndentedString(webpage)).append("\n");
+		sb.append("    branches: ").append(toIndentedString(branches)).append("\n");
+		sb.append("}");
+		return sb.toString();
+	}
 
-  public void setBranches(List<AUParty> branches) {
-    this.branches = branches;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    AUParty auParty = (AUParty) o;
-    return Objects.equals(this.id, auParty.id) && Objects.equals(this.name, auParty.name)
-        && Objects.equals(this.abbreviation, auParty.abbreviation)
-        && Objects.equals(this.registrationDate, auParty.registrationDate)
-        && Objects.equals(this.lastUpdated, auParty.lastUpdated)
-        && Objects.equals(this.electionFundingPayments, auParty.electionFundingPayments)
-        && Objects.equals(this.logoURI, auParty.logoURI)
-        && Objects.equals(this.webpage, auParty.webpage)
-        && Objects.equals(this.branches, auParty.branches);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(id, name, abbreviation, registrationDate, lastUpdated,
-        electionFundingPayments, logoURI, webpage, branches);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class AUParty {\n");
-
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    abbreviation: ").append(toIndentedString(abbreviation)).append("\n");
-    sb.append("    registrationDate: ").append(toIndentedString(registrationDate)).append("\n");
-    sb.append("    lastUpdated: ").append(toIndentedString(lastUpdated)).append("\n");
-    sb.append("    electionFundingPayments: ").append(toIndentedString(electionFundingPayments))
-        .append("\n");
-    sb.append("    logoURI: ").append(toIndentedString(logoURI)).append("\n");
-    sb.append("    webpage: ").append(toIndentedString(webpage)).append("\n");
-    sb.append("    branches: ").append(toIndentedString(branches)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
+	/**
+	 * Convert the given object to string with each line indented by 4 spaces
+	 * (except the first line).
+	 */
+	private String toIndentedString(Object o) {
+		if (o == null) {
+			return "null";
+		}
+		return o.toString().replace("\n", "\n    ");
+	}
 }
-

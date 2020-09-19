@@ -1,14 +1,13 @@
 package gameofmates.au.aecparties.providers;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import aec.gov.au.model.RegisteredPartiesCollection;
 
 @Service
 public class RemoteAecPoliticalPartiesService {
@@ -29,12 +28,11 @@ public class RemoteAecPoliticalPartiesService {
 	 * 
 	 * @return list of parties.
 	 */
-	public List<String> getParties() {
+	public RegisteredPartiesCollection getParties() {
 		logger.info("Entry");
 
-		String a = aecPartiesTemplate.getForObject(au_gameofmates_parties_url, String.class);
-		// .getForObject(au_gameofmates_parties_url,String.class , null);
-		return Arrays.asList(new String[] { a });
+		RegisteredPartiesCollection a = aecPartiesTemplate.getForObject(au_gameofmates_parties_url, RegisteredPartiesCollection.class);
+		return a;
 	}
 
 }

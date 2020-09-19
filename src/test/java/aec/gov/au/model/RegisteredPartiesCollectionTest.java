@@ -39,7 +39,8 @@ public class RegisteredPartiesCollectionTest {
 
     ObjectContent<RegisteredPartiesCollection> parties = this.json.parse(jsonString);
     
-    parties.getObject();
+    RegisteredPartiesCollection coll = parties.getObject();
+    
 
   }
 
