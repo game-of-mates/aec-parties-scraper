@@ -62,4 +62,9 @@ gitsetup.sh
 
 https://spring.io/guides/gs/messaging-rabbitmq/
 
-Github API Reference - https://developer.github.com/v3/repos/#create
+https://hub.docker.com/_/rabbitmq
+
+https://github.com/sanchigoyal/spring-mysql-rabbitmq-docker-example
+
+Rabbit MQ (Static config)
+https://medium.com/@thomasdecaux/deploy-rabbitmq-with-docker-static-configuration-23ad39cdbf39
