@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Info.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">aec-parties-scraper</a> &gt; <a href="index.source.html" class="el_package">aec.gov.au.model</a> &gt; <span class="el_source">Info.java</span></div><h1>Info.java</h1><pre class="source lang-java linenums">package aec.gov.au.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+<span class="fc" id="L5">public class Info {</span>
+
+<span class="fc" id="L7">	@JsonProperty(&quot;Title&quot;)</span>
+	private String title = null;
+
+	public String getTitle() {
+<span class="nc" id="L11">		return title;</span>
+	}
+
+	public void setTitle(String title) {
+<span class="fc" id="L15">		this.title = title;</span>
+<span class="fc" id="L16">	}</span>
+
+	public String getGeneratedOn() {
+<span class="nc" id="L19">		return generatedOn;</span>
+	}
+
+	public void setGeneratedOn(String generatedOn) {
+<span class="fc" id="L23">		this.generatedOn = generatedOn;</span>
+<span class="fc" id="L24">	}</span>
+
+<span class="fc" id="L26">	@JsonProperty(&quot;GeneratedOn&quot;)</span>
+	private String generatedOn = null;
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

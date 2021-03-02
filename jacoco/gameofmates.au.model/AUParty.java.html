@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AUParty.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">aec-parties-scraper</a> &gt; <a href="index.source.html" class="el_package">gameofmates.au.model</a> &gt; <span class="el_source">AUParty.java</span></div><h1>AUParty.java</h1><pre class="source lang-java linenums">package gameofmates.au.model;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import javax.validation.Valid;
+import javax.validation.constraints.Pattern;
+
+import org.springframework.validation.annotation.Validated;
+import org.threeten.bp.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * An AEC Registered political party, includes branches.
+ */
+@ApiModel(description = &quot;An AEC Registered political party, includes branches.&quot;)
+@Validated
+@javax.annotation.Generated(value = &quot;io.swagger.codegen.languages.SpringCodegen&quot;, date = &quot;2019-12-10T23:29:57.308Z&quot;)
+
+<span class="nc" id="L25">public class AUParty {</span>
+<span class="nc" id="L26">	@JsonProperty(&quot;id&quot;)</span>
+	private String id = null;
+
+<span class="nc" id="L29">	@JsonProperty(&quot;name&quot;)</span>
+	private String name = null;
+
+<span class="nc" id="L32">	@JsonProperty(&quot;abbreviation&quot;)</span>
+	private String abbreviation = null;
+
+<span class="nc" id="L35">	@JsonProperty(&quot;registrationDate&quot;)</span>
+	private LocalDate registrationDate = null;
+
+<span class="nc" id="L38">	@JsonProperty(&quot;lastUpdated&quot;)</span>
+	private LocalDate lastUpdated = null;
+
+<span class="nc" id="L41">	@JsonProperty(&quot;electionFundingPayments&quot;)</span>
+	private Boolean electionFundingPayments = null;
+
+<span class="nc" id="L44">	@JsonProperty(&quot;logoURI&quot;)</span>
+	private String logoURI = null;
+
+<span class="nc" id="L47">	@JsonProperty(&quot;webpage&quot;)</span>
+	private String webpage = null;
+
+<span class="nc" id="L50">	@JsonProperty(&quot;branches&quot;)</span>
+	@Valid
+	private List&lt;AUParty&gt; branches = null;
+
+	public AUParty id(String id) {
+<span class="nc" id="L55">		this.id = id;</span>
+<span class="nc" id="L56">		return this;</span>
+	}
+
+	/**
+	 * URN identifier of the aec.gov.au Party
+	 * 
+	 * @return id
+	 **/
+	@ApiModelProperty(example = &quot;urn:aec.gov.au:party:animaljusticeparty&quot;, value = &quot;URN identifier of the aec.gov.au Party&quot;)
+
+	@Pattern(regexp = &quot;urn\\:aec.gov.au\\:party\\:[A-Z,a-z,0-9,#,!]*&quot;)
+	public String getId() {
+<span class="nc" id="L68">		return id;</span>
+	}
+
+	public void setId(String id) {
+<span class="nc" id="L72">		this.id = id;</span>
+<span class="nc" id="L73">	}</span>
+
+	public AUParty name(String name) {
+<span class="nc" id="L76">		this.name = name;</span>
+<span class="nc" id="L77">		return this;</span>
+	}
+
+	/**
+	 * Name Of Party
+	 * 
+	 * @return name
+	 **/
+	@ApiModelProperty(example = &quot;Animal Justice Party&quot;, value = &quot;Name Of Party&quot;)
+
+	public String getName() {
+<span class="nc" id="L88">		return name;</span>
+	}
+
+	public void setName(String name) {
+<span class="nc" id="L92">		this.name = name;</span>
+<span class="nc" id="L93">	}</span>
+
+	public AUParty abbreviation(String abbreviation) {
+<span class="nc" id="L96">		this.abbreviation = abbreviation;</span>
+<span class="nc" id="L97">		return this;</span>
+	}
+
+	/**
+	 * Abbreviation used for the party
+	 * 
+	 * @return abbreviation
+	 **/
+	@ApiModelProperty(example = &quot;AJP&quot;, value = &quot;Abbreviation used for the party&quot;)
+
+	public String getAbbreviation() {
+<span class="nc" id="L108">		return abbreviation;</span>
+	}
+
+	public void setAbbreviation(String abbreviation) {
+<span class="nc" id="L112">		this.abbreviation = abbreviation;</span>
+<span class="nc" id="L113">	}</span>
+
+	public AUParty registrationDate(LocalDate registrationDate) {
+<span class="nc" id="L116">		this.registrationDate = registrationDate;</span>
+<span class="nc" id="L117">		return this;</span>
+	}
+
+	/**
+	 * AEC Registration date of the party
+	 * 
+	 * @return registrationDate
+	 **/
+	@ApiModelProperty(example = &quot;1984-06-22&quot;, value = &quot;AEC Registration date of the party&quot;)
+
+	@Valid
+
+	public LocalDate getRegistrationDate() {
+<span class="nc" id="L130">		return registrationDate;</span>
+	}
+
+	public void setRegistrationDate(LocalDate registrationDate) {
+<span class="nc" id="L134">		this.registrationDate = registrationDate;</span>
+<span class="nc" id="L135">	}</span>
+
+	public AUParty lastUpdated(LocalDate lastUpdated) {
+<span class="nc" id="L138">		this.lastUpdated = lastUpdated;</span>
+<span class="nc" id="L139">		return this;</span>
+	}
+
+	/**
+	 * AEC modification to registration
+	 * 
+	 * @return lastUpdated
+	 **/
+	@ApiModelProperty(example = &quot;2010-11-23&quot;, value = &quot;AEC modification to registration&quot;)
+
+	@Valid
+
+	public LocalDate getLastUpdated() {
+<span class="nc" id="L152">		return lastUpdated;</span>
+	}
+
+	public void setLastUpdated(LocalDate lastUpdated) {
+<span class="nc" id="L156">		this.lastUpdated = lastUpdated;</span>
+<span class="nc" id="L157">	}</span>
+
+	public AUParty electionFundingPayments(Boolean electionFundingPayments) {
+<span class="nc" id="L160">		this.electionFundingPayments = electionFundingPayments;</span>
+<span class="nc" id="L161">		return this;</span>
+	}
+
+	/**
+	 * Does party currently receive AEC funding?
+	 * 
+	 * @return electionFundingPayments
+	 **/
+	@ApiModelProperty(example = &quot;true&quot;, value = &quot;Does party currently receive AEC funding?&quot;)
+
+	public Boolean isElectionFundingPayments() {
+<span class="nc" id="L172">		return electionFundingPayments;</span>
+	}
+
+	public void setElectionFundingPayments(Boolean electionFundingPayments) {
+<span class="nc" id="L176">		this.electionFundingPayments = electionFundingPayments;</span>
+<span class="nc" id="L177">	}</span>
+
+	public AUParty logoURI(String logoURI) {
+<span class="nc" id="L180">		this.logoURI = logoURI;</span>
+<span class="nc" id="L181">		return this;</span>
+	}
+
+	/**
+	 * base64 encoded string of the Parties logo / image
+	 * 
+	 * @return logoURI
+	 **/
+	@ApiModelProperty(example = &quot;data:image/jpeg;charset=utf-8;base64,/9&quot;, value = &quot;base64 encoded string of the Parties logo / image&quot;)
+
+	public String getLogoURI() {
+<span class="nc" id="L192">		return logoURI;</span>
+	}
+
+	public void setLogoURI(String logoURI) {
+<span class="nc" id="L196">		this.logoURI = logoURI;</span>
+<span class="nc" id="L197">	}</span>
+
+	public AUParty webpage(String webpage) {
+<span class="nc" id="L200">		this.webpage = webpage;</span>
+<span class="nc" id="L201">		return this;</span>
+	}
+
+	/**
+	 * URL of the parties page
+	 * 
+	 * @return webpage
+	 **/
+	@ApiModelProperty(example = &quot;https://animaljusticeparty.org/&quot;, value = &quot;URL of the parties page&quot;)
+
+	public String getWebpage() {
+<span class="nc" id="L212">		return webpage;</span>
+	}
+
+	public void setWebpage(String webpage) {
+<span class="nc" id="L216">		this.webpage = webpage;</span>
+<span class="nc" id="L217">	}</span>
+
+	public AUParty branches(List&lt;AUParty&gt; branches) {
+<span class="nc" id="L220">		this.branches = branches;</span>
+<span class="nc" id="L221">		return this;</span>
+	}
+
+	public AUParty addBranchesItem(AUParty branchesItem) {
+<span class="nc bnc" id="L225" title="All 2 branches missed.">		if (this.branches == null) {</span>
+<span class="nc" id="L226">			this.branches = new ArrayList&lt;AUParty&gt;();</span>
+		}
+<span class="nc" id="L228">		this.branches.add(branchesItem);</span>
+<span class="nc" id="L229">		return this;</span>
+	}
+
+	/**
+	 * Branches of this party, such as State branches of a national party.
+	 * 
+	 * @return branches
+	 **/
+	@ApiModelProperty(value = &quot;Branches of this party, such as State branches of a national party.&quot;)
+
+	@Valid
+
+	public List&lt;AUParty&gt; getBranches() {
+<span class="nc" id="L242">		return branches;</span>
+	}
+
+	public void setBranches(List&lt;AUParty&gt; branches) {
+<span class="nc" id="L246">		this.branches = branches;</span>
+<span class="nc" id="L247">	}</span>
+
+	@Override
+	public boolean equals(Object o) {
+<span class="nc bnc" id="L251" title="All 2 branches missed.">		if (this == o) {</span>
+<span class="nc" id="L252">			return true;</span>
+		}
+<span class="nc bnc" id="L254" title="All 4 branches missed.">		if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L255">			return false;</span>
+		}
+<span class="nc" id="L257">		AUParty auParty = (AUParty) o;</span>
+<span class="nc bnc" id="L258" title="All 4 branches missed.">		return Objects.equals(this.id, auParty.id) &amp;&amp; Objects.equals(this.name, auParty.name)</span>
+<span class="nc bnc" id="L259" title="All 2 branches missed.">				&amp;&amp; Objects.equals(this.abbreviation, auParty.abbreviation)</span>
+<span class="nc bnc" id="L260" title="All 2 branches missed.">				&amp;&amp; Objects.equals(this.registrationDate, auParty.registrationDate)</span>
+<span class="nc bnc" id="L261" title="All 2 branches missed.">				&amp;&amp; Objects.equals(this.lastUpdated, auParty.lastUpdated)</span>
+<span class="nc bnc" id="L262" title="All 2 branches missed.">				&amp;&amp; Objects.equals(this.electionFundingPayments, auParty.electionFundingPayments)</span>
+<span class="nc bnc" id="L263" title="All 4 branches missed.">				&amp;&amp; Objects.equals(this.logoURI, auParty.logoURI) &amp;&amp; Objects.equals(this.webpage, auParty.webpage)</span>
+<span class="nc bnc" id="L264" title="All 2 branches missed.">				&amp;&amp; Objects.equals(this.branches, auParty.branches);</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="nc" id="L269">		return Objects.hash(id, name, abbreviation, registrationDate, lastUpdated, electionFundingPayments, logoURI,</span>
+				webpage, branches);
+	}
+
+	@Override
+	public String toString() {
+<span class="nc" id="L275">		StringBuilder sb = new StringBuilder();</span>
+<span class="nc" id="L276">		sb.append(&quot;class AUParty {\n&quot;);</span>
+
+<span class="nc" id="L278">		sb.append(&quot;    id: &quot;).append(toIndentedString(id)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L279">		sb.append(&quot;    name: &quot;).append(toIndentedString(name)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L280">		sb.append(&quot;    abbreviation: &quot;).append(toIndentedString(abbreviation)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L281">		sb.append(&quot;    registrationDate: &quot;).append(toIndentedString(registrationDate)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L282">		sb.append(&quot;    lastUpdated: &quot;).append(toIndentedString(lastUpdated)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L283">		sb.append(&quot;    electionFundingPayments: &quot;).append(toIndentedString(electionFundingPayments)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L284">		sb.append(&quot;    logoURI: &quot;).append(toIndentedString(logoURI)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L285">		sb.append(&quot;    webpage: &quot;).append(toIndentedString(webpage)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L286">		sb.append(&quot;    branches: &quot;).append(toIndentedString(branches)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L287">		sb.append(&quot;}&quot;);</span>
+<span class="nc" id="L288">		return sb.toString();</span>
+	}
+
+	/**
+	 * Convert the given object to string with each line indented by 4 spaces
+	 * (except the first line).
+	 */
+	private String toIndentedString(Object o) {
+<span class="nc bnc" id="L296" title="All 2 branches missed.">		if (o == null) {</span>
+<span class="nc" id="L297">			return &quot;null&quot;;</span>
+		}
+<span class="nc" id="L299">		return o.toString().replace(&quot;\n&quot;, &quot;\n    &quot;);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
